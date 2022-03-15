@@ -1,0 +1,14 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: account-validator
+
+hystrix:
+  command:
+    queryTimeOutHandler:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 2000 #2 seconds

@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+service:
+  api:
+    providers:
+    - name: source1
+      url: https://source1.com/v1/api/account/validate
+    - name: source2
+      url: https://source2.com/v1/api/account/validate
+
+
+hystrix:
+  command:
+    queryTimeOutHandler:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 600000 #60 seconds
