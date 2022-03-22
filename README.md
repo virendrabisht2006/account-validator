@@ -1,12 +1,12 @@
 # account-validator
 Description : Account validator a simple spring boot microservice platform which validate account in different external validation engine.
 
-Architectural Decision: Spring2, Junit4 log4j, rest template, hystrix is used as external library. Should use maximum feature of java8. Used TDD for developent for ServiceLayer.
+Architectural Decision: Spring2, Junit4 log4j, rest template, hystrix is used as external library. Should use maximum feature of java8. Used TDD for development for ServiceLayer.
 
 --Assumption Taken 
 1- The external service will be available. 
-2- All source which will be used for validation should be passed in input request. i.e. exmaple there could 10 sources confgiured in particular env, but input request says validate agaist 2 source. the account number has to be validated against the 2 sources not with 10 source.
-3- By default appication will run at 8080 port
+2- All source which will be used for validation should be passed in input request. i.e. example there could 10 sources configured in particular env, but input request says validate agaist 2 source. the account number has to be validated against the 2 sources not with 10 source.
+3- By default application will run at 8080 port
 4- if external API takes longer than expected the query will be timeout as of not default time out is 2 sec. which is configurable per env.
 
 How it works:
